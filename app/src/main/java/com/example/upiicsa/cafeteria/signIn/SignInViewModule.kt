@@ -13,6 +13,8 @@ class SignInViewModel() : ViewModel() {
         isSignIn.value = false
     }
 
+    fun upperCase(texto : String) = texto.toUpperCase()
+
 
     @Suppress("UNCHECKED_CAST")
     class Factory() : ViewModelProvider.Factory {

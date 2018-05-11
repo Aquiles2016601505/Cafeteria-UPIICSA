@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/pruebaTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:text="Hola Mundo"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/prueba2TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pruebaTextView"
+        android:layout_marginTop="40dp"
+        android:text="Hola Mundo"
+        android:textColor="#000000"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prueba2TextView"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/usernameEditText" />
+
+    <Button
+        android:id="@+id/enviarButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/pruebaTextView"
+        android:layout_below="@+id/usernameEditText"
+        android:layout_marginStart="20dp"
+        android:text="Enviar"
+        android:layout_marginTop="78dp" />
+
+</RelativeLayout>

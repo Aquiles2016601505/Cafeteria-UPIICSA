@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.example.upiicsa.cafeteria.R
 import dagger.android.AndroidInjection
+import kotlinx.android.synthetic.main.sign_in_activity.*
 import javax.inject.Inject
 
 
@@ -21,9 +22,12 @@ class SignInActivity : AppCompatActivity() {
         AndroidInjection.inject(this);
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
-
-
         setContentView(R.layout.sign_in_activity)
+        enviarButton.setOnClickListener({
+            pruebaTextView.setText(signInViewModel.upperCase(usernameEditText.text.toString()))
+        }
+        )
+
 
     }
 
