@@ -25,6 +25,7 @@ class SignInActivity : AppCompatActivity() {
         setContentView(R.layout.sign_in_activity)
         enviarButton.setOnClickListener({
             pruebaTextView.setText(signInViewModel.upperCase(usernameEditText.text.toString()))
+            prueba2TextView.setText(signInViewModel.upperCase(usernameEditText.text.toString()))
         }
         )
 
