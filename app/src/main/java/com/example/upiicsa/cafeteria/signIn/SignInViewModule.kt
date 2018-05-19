@@ -13,6 +13,8 @@ class SignInViewModel() : ViewModel() {
         isSignIn.value = false
     }
 
+    fun signIn() = isSignIn.postValue(true)
+
     fun upperCase(texto : String) = texto.toUpperCase()
 
 

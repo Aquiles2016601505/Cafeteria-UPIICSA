@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
+import android.view.inputmethod.EditorInfo
 import com.example.upiicsa.cafeteria.R
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.sign_in_activity.*
@@ -23,12 +25,23 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         setContentView(R.layout.sign_in_activity)
-        enviarButton.setOnClickListener({
-            pruebaTextView.setText(signInViewModel.upperCase(usernameEditText.text.toString()))
+        sendButton.setOnClickListener({
+           signInViewModel.signIn()
         }
         )
+        passwordEditText.setOnEditorActionListener { _, actionId, _ ->
+            when (actionId) {
+                EditorInfo.IME_ACTION_SEND -> {
+                    send.invoke(passwordEditText)
+                    true
+                }
+                else -> false
+            }
+        }
+    }
 
-
+    private val send: (View) -> Unit = {
+        signInViewModel.signIn()
     }
 
 }
