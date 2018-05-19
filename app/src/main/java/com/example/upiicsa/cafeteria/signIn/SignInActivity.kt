@@ -26,9 +26,11 @@ class SignInActivity : AppCompatActivity() {
         supportActionBar?.hide()
         setContentView(R.layout.sign_in_activity)
         sendButton.setOnClickListener({
-           signInViewModel.signIn()
+            signInViewModel.signIn()
+
         }
         )
+
         passwordEditText.setOnEditorActionListener { _, actionId, _ ->
             when (actionId) {
                 EditorInfo.IME_ACTION_SEND -> {
@@ -38,6 +40,7 @@ class SignInActivity : AppCompatActivity() {
                 else -> false
             }
         }
+
     }
 
     private val send: (View) -> Unit = {
