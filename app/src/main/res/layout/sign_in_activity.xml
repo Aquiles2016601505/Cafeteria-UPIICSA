@@ -18,29 +18,22 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="87dp"
-                android:layout_height="90dp"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
                 android:layout_marginBottom="441dp"
-                android:layout_marginEnd="140dp"
-                android:layout_marginStart="135dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
-                android:background="@color/colorPrimaryDark" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="125dp"
-                android:layout_height="21dp"
-                android:layout_marginEnd="140dp"
-                android:layout_marginStart="135dp"
-                android:layout_marginTop="190dp" />
-
+                android:scaleType="centerCrop"
+                android:src="@mipmap/image_logo"/>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="250dp">
+                android:layout_marginTop="250dp"
+                android:theme="@style/EditTextLogin"
+                >
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/usernameEditText"
@@ -50,6 +43,7 @@
                     android:imeOptions="actionNext"
                     android:inputType="text"
                     android:maxLines="1"
+                    android:textColor="@color/signInEditTextColor"
                     android:nextFocusDown="@+id/passwordEditText"
                     android:nextFocusForward="@+id/passwordEditText"
                     android:textSize="19sp" />
@@ -62,12 +56,13 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="310dp"
                 app:passwordToggleEnabled="true"
-                app:passwordToggleTint="#FFF">
+                android:theme="@style/EditTextLogin">
 
                 <EditText
                     android:id="@+id/passwordEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/signInEditTextColor"
                     android:hint="password"
                     android:imeOptions="actionSend"
                     android:inputType="textPassword"
@@ -84,7 +79,7 @@
                 android:layout_marginTop="380dp"
                 android:gravity="center_horizontal"
                 android:text="Forgot Password"
-                android:textColor="#89cac7"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="16sp" />
 
             <Button
@@ -96,23 +91,24 @@
                 android:layout_marginEnd="60dp"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="12dp"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:background="@color/colorPrimary"
                 android:text="Iniciar Sesion"
-                android:textColor="@color/colorPrimaryDark" />
+                android:textColor="#fff" />
 
             <Button
                 android:id="@+id/signUpButton"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
                 android:layout_below="@+id/sendButton"
-                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="60dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="20dp"
-                android:gravity="center_horizontal"
-                android:text="Registrarse"
-                android:textColor="#000"
-                android:textSize="16sp" />
-
-
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:background="@color/colorPrimary"
+                android:text="Registratrarse"
+                android:textColor="#fff" />
         </RelativeLayout>
 
     </ScrollView>
