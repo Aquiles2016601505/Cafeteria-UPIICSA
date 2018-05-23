@@ -29,9 +29,9 @@ class MenuShopActivity :AppCompatActivity() {
         AndroidInjection.inject(this);
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menu_shop_activity)
-        loadDayMenu()
-
-
+        //loadDayMenu()
+        menuScoreRatingBar.rating = 5.0F
+        
         orderListAdapter = MenuShopAdapter()
         orderListAdapter.onItemSelected = {
 

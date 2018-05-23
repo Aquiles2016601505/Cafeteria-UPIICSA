@@ -21,6 +21,8 @@
                 android:layout_width="match_parent"
                 android:layout_margin="10dp"
                 android:layout_height="138dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/menuimage"
                 />
             <TextView
                 android:id="@+id/scoreLabelViewText"

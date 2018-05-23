@@ -23,8 +23,7 @@
                 android:layout_marginBottom="441dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/image_logo"/>
+                android:src="@mipmap/logo_app"/>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
