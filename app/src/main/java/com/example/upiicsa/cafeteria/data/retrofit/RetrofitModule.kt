@@ -2,8 +2,8 @@ package com.example.upiicsa.cafeteria.data.retrofit
 
 
 
+import android.arch.core.BuildConfig
 import android.os.Build
-import com.example.upiicsa.cafeteria.BuildConfig
 import com.example.upiicsa.cafeteria.data.ApiGateway
 import dagger.Module
 import dagger.Provides
@@ -45,6 +45,6 @@ class RetrofitModule {
     fun provideRetrofit(client: OkHttpClient) = Retrofit.Builder()
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("http://10.109.70.160/api/")
+            .baseUrl("http://192.168.43.12:4000/api/")
             .build()
 }
